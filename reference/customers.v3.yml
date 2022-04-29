@@ -3405,7 +3405,7 @@ components:
           minLength: 0
           maxLength: 100
         state_or_province:
-          description: The state or province name. It is required for countries that need a state/province to complete an address.
+          description: The state or province name. Required for countries in which valid addresses must contain a state/province.
           type: string
           minLength: 0
           maxLength: 100
