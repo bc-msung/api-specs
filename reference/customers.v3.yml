@@ -3410,7 +3410,7 @@ components:
           minLength: 0
           maxLength: 100
         postal_code:
-          description: The postal code of the customer address. It is required for countries that need postal codes to complete an address.
+          description: The postal code of the customer address. Required for countries in which valid addresses must have postal codes.
           type: string
           minLength: 0
           maxLength: 30
