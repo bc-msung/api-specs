@@ -898,6 +898,18 @@ components:
             response:
               value:
                 data:
+                  - id: bigcommerce.gift_certificate
+                    name: Gift Certificate
+                    test_mode: false
+                    type: gift_certificate
+                    supported_instruments: []
+                    stored_instruments: []
+                  - id: bigcommerce.store_credit
+                    name: Store Credit
+                    test_mode: false
+                    type: store_credit
+                    supported_instruments: []
+                    stored_instruments: []
                   - id: stripe.card
                     name: Stripe
                     test_mode: true
@@ -926,18 +938,6 @@ components:
                         last_4: '4242'
                         token: 050a1e5c982e5905288ec5ec33f292772762033a0704f46fccb16bf1940b51ef
                         is_default: true
-                  - id: bigcommerce.gift_certificate
-                    name: Gift Certificate
-                    test_mode: false
-                    type: gift_certificate
-                    supported_instruments: []
-                    stored_instruments: []
-                  - id: bigcommerce.store_credit
-                    name: Store Credit
-                    test_mode: false
-                    type: store_credit
-                    supported_instruments: []
-                    stored_instruments: []
                 meta: {}
     paymentAccessToken_Resp:
       description: ''
