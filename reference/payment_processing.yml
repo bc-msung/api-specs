@@ -1272,7 +1272,7 @@ components:
           description: Identifier representing this gift certificate
           type: string
           minLength: 15
-          maxLenth: 15
+          maxLength: 15
       required:
         - type
         - gift_certificate_code
