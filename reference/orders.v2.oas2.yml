@@ -681,7 +681,7 @@ paths:
       operationId: getAllOrderShipments
     post:
       description: |
-        Creates an *Order Shipment*. For more details, see [Shipping an Order](/api-docs/orders/orders-api-overview#shipping-an-order).
+        Creates an *Order Shipment*. For more details, see [Shipping an Order](/api-docs/orders/orders-api-overview#creating-order-shipments).
 
         **Required Fields**
         *   order_address_id
