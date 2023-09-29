@@ -51,7 +51,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Tax_Settings_Req'
+              $ref: '#/components/schemas/Tax_Settings'
         required: true
       responses:
         '200':
@@ -139,49 +139,6 @@ components:
           type: string
           description: 'Describes the fallback behavior that applies when a tax provider produces an error. A merchant may decide to use a flat 10% fallback tax rate, their basic tax settings, or to block the transaction until they achieve a successful result.'
           default: FIXED
-          enum:
-            - FIXED
-            - BASIC
-            - DISABLE
-        should_subtract_store_tax:
-          default: true
-          type: boolean
-          description: This setting applies only if a merchant enters tax-inclusive prices. When enabled, the store subtracts the itemʼs store tax rate before calculating tax using the shopperʼs tax zone. The tax-exclusive amount will be the same across all tax zones. When disabled, the tax-inclusive price remains the same across all tax zones; only the tax amount will vary based on the shopperʼs location. The tax-exclusive amount may vary among tax zones. These calculations are relevant for tax pricing and tax quotations that use basic tax.
-        should_use_geolocation_to_determine_guest_shopper_tax_zone:
-          default: false
-          type: boolean
-          description: When enabled, the guest shopper's geolocation will be used to determine the relevant country-level tax zone for storefront tax estimation. The geolocation data will be used to determine the corresponding tax zone provided in basic tax - once the corresponding tax zone is found, the tax estimation will be applied to the store.
-        guest_shopper_tax_zone_id:
-          default: 1
-          type: integer
-          description: Describes which tax zone is used for guest shoppers when requiring storefront tax estimation. When applicable, the guest shopper's geolocation will be used in favour of the guest shopper tax zone.
-        store_tax_zone_id:
-          default: 1
-          type: integer
-          description: This setting applies only if a merchant enters tax-inclusive prices and store tax subtraction is enabled. Describes which tax zone to use for store tax subtraction.
-    Tax_Settings_Req:
-      type: object
-      properties:
-        tax_entered_with_prices:
-          type: boolean
-          description: Whether prices entered on this store include a tax component or not.
-        price_display_settings:
-          type: object
-          description: Settings that describe how prices display at the global level.
-          properties:
-            show_inclusive_in_control_panel:
-              type: boolean
-              description: Whether to show prices as tax inclusive or tax exclusive in the BigCommerce control panel.
-            invoice_price_display_strategy:
-              type: string
-              description: 'Whether to show prices as tax inclusive or tax exclusive across all invoices, or use the shopperʼs tax zone for price display on invoices.'
-              enum:
-                - ZONE
-                - INCLUSIVE
-                - EXCLUSIVE
-        fallback_strategy:
-          type: string
-          description: 'Describes the fallback behaviour that applies when a tax provider produces an error. A merchant may decide to use a flat 10% fallback tax rate, their basic tax settings, or to block the transaction until a successful result can be achieved.'
           enum:
             - FIXED
             - BASIC
