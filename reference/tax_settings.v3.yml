@@ -154,7 +154,7 @@ components:
         guest_shopper_tax_zone_id:
           default: 1
           type: integer
-          description: Describes which tax zone is used for guest shoppers when requiring storefront tax estimation. When applicable, the guest shopper's geolocation will be used in favour of the guest shopper tax zone.
+          description: ID for the tax zone a store uses when estimating tax for guest shoppers. The store uses this zone if you disable `should_use_geolocation_to_determine_guest_shopper_tax_zone`. The store also uses this zone if there is no matching country-level tax zone for the geolocation.
         store_tax_zone_id:
           default: 1
           type: integer
