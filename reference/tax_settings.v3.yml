@@ -158,7 +158,7 @@ components:
         store_tax_zone_id:
           default: 1
           type: integer
-          description: This setting applies only if a merchant enters tax-inclusive prices and store tax subtraction is enabled. Describes which tax zone to use for store tax subtraction.
+          description: ID for the tax zone a store uses when subtracting store tax. This setting applies only if a merchant enters tax-inclusive prices and subtracts store tax before tax calculation.
     MetaOpen:
       title: Response meta
       type: object
