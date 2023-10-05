@@ -150,7 +150,7 @@ components:
         should_use_geolocation_to_determine_guest_shopper_tax_zone:
           default: false
           type: boolean
-          description: When enabled, the guest shopper's geolocation will be used to determine the relevant country-level tax zone for storefront tax estimation. The geolocation data will be used to determine the corresponding tax zone provided in basic tax - once the corresponding tax zone is found, the tax estimation will be applied to the store.
+          description: This setting determines which tax zone a store uses to estimate tax for guest shoppers. When enabled, the store identifies a country-level tax zone based on the geolocation of a guest shopper. The store then applies the corresponding tax zone to estimate taxes. When disabled, the store identifies the zone using the provided `guest_shopper_tax_zone_id` field instead. Only the tax zones you configure can be matched to the guest shopper's geolocation.
         guest_shopper_tax_zone_id:
           default: 1
           type: integer
